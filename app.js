@@ -20,7 +20,7 @@ window.addEventListener("load", function () {
       taskInput.value = "";
       taskText.setAttribute("readonly", "readonly");
 
-      taskInput.focus();
+      // taskInput.focus();
     }
   });
 });
