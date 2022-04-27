@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Courier New", Courier, monospace;
+  background-color: #111111;
+  color: #ffffff;
+}
+
+.container {
+  background-color: #001a31;
+  width: 400px;
+  margin: 50px auto;
+  border-radius: 10px;
+  border: 1px solid #ffff;
+}
+
+.header-title {
+  padding: 10px;
+  border-bottom: 1px solid #ffffff;
+  text-align: center;
+}
+
+.input-container {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+.task-label {
+  display: block;
+}
+
+.task-input {
+  border: none;
+  width: 250px;
+  background-color: #001a31;
+  caret-color: white;
+  color: #ffffff;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #ffffff;
+  opacity: 1; /* Firefox */
+}
+
+.task-input:focus {
+  outline: none;
+}
+
+.create-btn {
+  background-color: inherit;
+  border: none;
+  color: #ce4646;
+}
+
+.tasks {
+  padding: 10px;
+  padding-bottom: 20px;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ce4646;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.task-content {
+  background-color: inherit;
+  color: #ffffff;
+  border: none;
+}
+
+.task-content:focus {
+  outline: none;
+  width: 230px;
+}
+
+.action-btn {
+  background-color: inherit;
+  border: none;
+  color: white;
+}
+
+.delete {
+  color: #001a31;
+}
