@@ -2,10 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
 }
 
 body {
-  font-family: "Courier New", Courier, monospace;
   background-color: #111111;
   color: #ffffff;
 }
@@ -28,6 +28,7 @@ body {
   display: flex;
   padding: 10px;
   justify-content: space-between;
+  align-items: center;
 }
 
 .task-label {
@@ -37,14 +38,14 @@ body {
 .task-input {
   border: none;
   width: 250px;
-  background-color: #001a31;
+  background-color: inherit;
   caret-color: white;
   color: #ffffff;
 }
 
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #ffffff;
+  color: #999999;
   opacity: 1; /* Firefox */
 }
 
@@ -91,4 +92,9 @@ body {
 
 .delete {
   color: #001a31;
+}
+
+.btn-wrapper {
+  display: flex;
+  gap: 10px;
 }

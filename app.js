@@ -17,10 +17,25 @@ window.addEventListener("load", function () {
       taskEl.appendChild(taskText);
       tasks.appendChild(taskEl);
 
-      taskInput.value = "";
-      taskText.setAttribute("readonly", "readonly");
+      const btnDiv = document.createElement("div");
+      btnDiv.className = "btn-wrapper";
+      const editBtn = document.createElement("button");
+      editBtn.classList.add("edit");
+      editBtn.classList.add("action-btn");
+      editBtn.innerHTML = "EDIT";
 
-      // taskInput.focus();
+      const delBtn = document.createElement("button");
+      delBtn.classList.add("delete");
+      delBtn.classList.add("action-btn");
+      delBtn.innerHTML = "DELETE";
+
+      btnDiv.appendChild(editBtn);
+      btnDiv.appendChild(delBtn);
+      taskEl.appendChild(btnDiv);
+
+      taskText.setAttribute("readonly", "readonly");
+      taskInput.value = "";
+      taskInput.focus();
     }
   });
 });
