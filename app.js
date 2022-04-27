@@ -8,32 +8,34 @@ window.addEventListener("load", function () {
     if (!taskInput.value) {
       alert("required input");
     } else {
-      const taskEl = document.createElement("div");
-      taskEl.className = "task";
-      const taskText = document.createElement("input");
-      taskText.className = "task-content";
-      taskText.value = taskInput.value;
-
-      taskEl.appendChild(taskText);
-      tasks.appendChild(taskEl);
-
-      const btnDiv = document.createElement("div");
-      btnDiv.className = "btn-wrapper";
+      //task parent div
+      const task = document.createElement("div");
+      task.className = "task";
+      //task input
+      const taskContent = document.createElement("input");
+      taskContent.className = "task-content";
+      taskContent.value = taskInput.value;
+      taskContent.setAttribute("readonly", "readonly");
+      //actions button wrapper
+      const btnWrapper = document.createElement("div");
+      btnWrapper.className = "btn-wrapper";
+      //edit button
       const editBtn = document.createElement("button");
       editBtn.classList.add("edit");
       editBtn.classList.add("action-btn");
       editBtn.innerHTML = "EDIT";
-
+      //delete button
       const delBtn = document.createElement("button");
       delBtn.classList.add("delete");
       delBtn.classList.add("action-btn");
       delBtn.innerHTML = "DELETE";
-
-      btnDiv.appendChild(editBtn);
-      btnDiv.appendChild(delBtn);
-      taskEl.appendChild(btnDiv);
-
-      taskText.setAttribute("readonly", "readonly");
+      //append the new elements created
+      tasks.appendChild(task);
+      task.appendChild(taskContent);
+      task.appendChild(btnWrapper);
+      btnWrapper.appendChild(editBtn);
+      btnWrapper.appendChild(delBtn);
+      //input reset upon creating new task
       taskInput.value = "";
       taskInput.focus();
     }
