@@ -46,9 +46,15 @@ window.addEventListener("load", function () {
           taskContent.removeAttribute("readonly");
           taskContent.focus();
           editBtn.innerHTML = "SAVE";
+          editBtn.style.color = "#000000";
         } else {
+          //if edit action has empty value, remove task
+          if (taskContent.value.length == 0) {
+            task.remove();
+          }
           taskContent.setAttribute("readonly", "readonly");
           editBtn.innerHTML = "EDIT";
+          editBtn.style.color = "#FFFFFF";
         }
       });
 
