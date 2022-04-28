@@ -20,7 +20,7 @@ window.addEventListener("load", function () {
       const btnWrapper = document.createElement("div");
       btnWrapper.className = "btn-wrapper";
       //edit button
-      const editBtn = document.createElement("button");
+      let editBtn = document.createElement("button");
       editBtn.classList.add("edit");
       editBtn.classList.add("action-btn");
       editBtn.innerHTML = "EDIT";
@@ -38,6 +38,19 @@ window.addEventListener("load", function () {
       //input reset upon creating new task
       taskInput.value = "";
       taskInput.focus();
+
+      //edit button event
+      editBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        if (editBtn.innerHTML === "EDIT") {
+          taskContent.removeAttribute("readonly");
+          taskContent.focus();
+          editBtn.innerHTML = "SAVE";
+        } else {
+          taskContent.setAttribute("readonly", "readonly");
+          editBtn.innerHTML = "EDIT";
+        }
+      });
     }
   });
 });
