@@ -2,6 +2,7 @@ window.addEventListener("load", function () {
   let taskForm = document.querySelector("#task-form");
   let taskInput = document.querySelector(".task-input");
   let tasks = document.querySelector(".tasks");
+  let clear = document.querySelector("#clear");
 
   taskForm.addEventListener("submit", function (e) {
     e.preventDefault();
@@ -66,5 +67,14 @@ window.addEventListener("load", function () {
         task.remove();
       });
     }
+  });
+  //clear button event
+  clear.addEventListener("click", function (e) {
+    e.preventDefault();
+    let clearConfirm = confirm(
+      "are you sure you want to clear all of your task?"
+    );
+    if (!clearConfirm) return;
+    tasks.innerHTML = "";
   });
 });

@@ -43,6 +43,10 @@ body {
   color: #ffffff;
 }
 
+#task-form {
+  border-bottom: 1px solid #ffffff;
+}
+
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #999999;
@@ -56,12 +60,21 @@ body {
 .create-btn {
   background-color: inherit;
   border: none;
-  color: #ce4646;
+  color: #ffffff;
 }
 
 .tasks {
   padding: 10px;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.clear-btn {
+  padding: 10px;
+  padding-bottom: 0;
+}
+
+#clear {
+  color: #ce4646;
 }
 
 .task {
