@@ -51,6 +51,14 @@ window.addEventListener("load", function () {
           editBtn.innerHTML = "EDIT";
         }
       });
+
+      //delete button event
+      delBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        let confirmAction = confirm("are you sure?");
+        if (!confirmAction) return;
+        task.remove();
+      });
     }
   });
 });
